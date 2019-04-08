@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PyNotes</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" href="/">PY Notes App</a>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse" >
+    <ul class="navbar-nav">
+      <li class="nav-item {{addNote}}">
+        <a class="nav-link" href="/add">Add note</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>

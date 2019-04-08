@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="height:60px"></div>
+<div class="jumbotron">
+  <h1 class="display-8">{{title}}</h1>
+  <p class="lead">{{content}}</p>
+</div>
+<button class="btn btn-dark" onclick="window.location='/'" >< Back</button>
+<button class="btn btn-danger" onclick="window.location='/remove/{{id}}'" style="float:right">Delete</button>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="height:60px"></div>
+<div class="row">
+<div class="col-12">
+    <table class="table table-light table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Your Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for name in result %}
+            <tr>
+                <td style="padding-left:36px" onclick="window.location='/show/{{name['_id']}}'">{{name['title']}}</td>
+                <td style="text-align:center" onclick="window.location='/remove/{{name['_id']}}'">
+                    <button class="btn"><i class="fa fa-trash"></i></button>
+                </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+</div>
+
+{% endblock %}
